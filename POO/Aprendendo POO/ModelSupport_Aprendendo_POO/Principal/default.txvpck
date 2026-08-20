@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="waswoqt9kwneaxccr_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:Aprendendo_POO:Principal.TPessoa">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="480,20,105,99" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:Aprendendo_POO:Principal.TPessoa.Nome" />
+      <reference referencedUin="delphi:e_field:src:Aprendendo_POO:Principal.TPessoa.Telefone" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Aprendendo_POO:Principal.TAdminstrador">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="320,20,99,99" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:Aprendendo_POO:Principal.TAdminstrador.Excluir()" />
+      <reference referencedUin="delphi:e_method:src:Aprendendo_POO:Principal.TAdminstrador.Inserir()" />
+      <reference referencedUin="delphi:l_gnt:src:Aprendendo_POO:Principal.TAdminstrador:Principal.TUsuario">
+        <property name="sourceAnchor" value="369,119" />
+        <property name="targetAnchor" value="369,140" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Aprendendo_POO:Principal.TUsuario">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="320,140,130,99" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:Aprendendo_POO:Principal.TUsuario.NomeAcesso" />
+      <reference referencedUin="delphi:e_field:src:Aprendendo_POO:Principal.TUsuario.Senha" />
+      <reference referencedUin="delphi:l_gnt:src:Aprendendo_POO:Principal.TUsuario:Principal.TPessoa">
+        <property name="sourceAnchor" value="444,140" />
+        <property name="targetAnchor" value="480,111" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Aprendendo_POO:Principal.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Aprendendo_POO:Principal.TCliente">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="640,140,126,99" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:Aprendendo_POO:Principal.TCliente.CNPJ" />
+      <reference referencedUin="delphi:e_field:src:Aprendendo_POO:Principal.TCliente.RazaoSocial" />
+      <reference referencedUin="delphi:l_gnt:src:Aprendendo_POO:Principal.TCliente:Principal.TPessoa">
+        <property name="sourceAnchor" value="640,144" />
+        <property name="targetAnchor" value="585,106" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+  </view>
+</nodeSet>
