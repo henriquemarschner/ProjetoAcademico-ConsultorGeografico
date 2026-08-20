@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsultaPaises
 {
-    public class ControllerPaises: Controller
+    public class ControllerPaises: ControllerBase
     {
         public override string CarregarObj(object obj)
+        {
+            return null;
+        }
+        public override List<Object> CarregarCol(object obj)
         {
             return null;
         }

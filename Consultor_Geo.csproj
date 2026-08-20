@@ -50,8 +50,11 @@
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\ControllerCidades.cs" />
     <Compile Include="Controller\ControllerEstados.cs" />
+    <Compile Include="Controller\ControllerFuncionario.cs" />
+    <Compile Include="Controller\ControllerInterface.cs" />
     <Compile Include="Controller\ControllerPaises.cs" />
     <Compile Include="Classes\Estados.cs" />
+    <Compile Include="Controller\ControllerPessoa.cs" />
     <Compile Include="Forms\FrmCad.cs">
       <SubType>Form</SubType>
     </Compile>
