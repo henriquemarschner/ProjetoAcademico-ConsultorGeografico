@@ -13,7 +13,7 @@ namespace ConsultaPaises
             return null;
         }
 
-        public virtual List<object> CarregarCol(object obj)
+        public virtual List<Object> CarregarCol(object obj)
         {
             return null;
         }
@@ -28,7 +28,7 @@ namespace ConsultaPaises
             return null;
         }
 
-        public virtual List<object> Pesquisar(object obj)
+        public virtual List<Object> Pesquisar(object obj)
         {
             return null;
         }
