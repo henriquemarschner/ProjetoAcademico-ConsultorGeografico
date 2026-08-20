@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultaPaises
 {
-    internal class ControllerEstados: Controller
+    public class ControllerEstados : Controller
     {
         ControllerPaises aControllerPais;
 

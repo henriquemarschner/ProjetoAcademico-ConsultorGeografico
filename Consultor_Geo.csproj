@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Cidades.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="ControllerEstados.cs" />
     <Compile Include="ControllerPaises.cs" />
     <Compile Include="Estados.cs" />
     <Compile Include="FrmCad.cs">
