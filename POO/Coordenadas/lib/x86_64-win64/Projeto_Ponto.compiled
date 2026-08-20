@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1533567158"/>
-  <Params Value="-MObjFPC -Scghi -O1 -gw3 -gl -l -vewnhibq &quot;-FiC:\Users\Thin15\OneDrive\Documentos\Faculdade\Terceiro periodo\Coordenadas\lib\x86_64-win64&quot; &quot;-FuC:\Users\Thin15\OneDrive\Documentos\Faculdade\Terceiro periodo\Coordenadas\&quot; &quot;-FUC:\Users\Thin15\OneDrive\Documentos\Faculdade\Terceiro periodo\Coordenadas\lib\x86_64-win64\&quot; &quot;-FEC:\Users\Thin15\OneDrive\Documentos\Faculdade\Terceiro periodo\Coordenadas\&quot; &quot;-oC:\Users\Thin15\OneDrive\Documentos\Faculdade\Terceiro periodo\Coordenadas\Projeto_Ponto.exe&quot; Projeto_Ponto.lpr"/>
-</CONFIG>
