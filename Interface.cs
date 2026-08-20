@@ -31,7 +31,6 @@ namespace ConsultaPaises
 
             oFrmCadEstados.setFrmConsultas(oFrmConPaises);
             oFrmCadCid.setFrmConsultas(oFrmConEstados);
-            oFrmCadCid.setFrmConsultas(oFrmConPaises);
         }
 
         public void PecaPaises(object obj, object ctrl)

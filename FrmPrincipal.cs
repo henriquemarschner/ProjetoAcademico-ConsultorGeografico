@@ -15,12 +15,14 @@ namespace ConsultaPaises
         private Interface aInter;
         private Paises oPais;
         private Estados oEstado;
+        private Cidades aCidade;
         public FrmPrincipal()
         {
             InitializeComponent();
             aInter = new Interface();
             oPais = new Paises();
             oEstado = new Estados();
+            aCidade = new Cidades();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace ConsultaPaises
 
         private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            aInter.PecaCidades(null, null);
+            aInter.PecaCidades(aCidade, null);
         }
 
         private void paisesToolStripMenuItem_Click(object sender, EventArgs e)
