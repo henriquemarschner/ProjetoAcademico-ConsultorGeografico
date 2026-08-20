@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultaPaises.Controller
 {
-    public class ControllerPessoa : ControllerBase
+    public class ControllerPessoa : Controller
     {
         public override string CarregarObj(object obj)
         {

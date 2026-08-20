@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsultaPaises
+namespace ConsultaPaises.Controller
 {
-    public class ControllerPaises: ControllerBase
+    public class ControllerPaises: Controller
     {
         public override string CarregarObj(object obj)
         {

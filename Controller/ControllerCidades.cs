@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsultaPaises
+namespace ConsultaPaises.Controller
 {
-        public class ControllerCidades : ControllerBase
+        public class ControllerCidades : Controller
         {
             ControllerPaises aControllerPais;
             ControllerEstados aControllerEstado;

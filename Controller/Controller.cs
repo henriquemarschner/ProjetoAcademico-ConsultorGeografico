@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsultaPaises
+namespace ConsultaPaises.Controller
 {
-    public class ControllerBase
+    public class Controller
     {
         public virtual string CarregarObj(object obj)
         {
