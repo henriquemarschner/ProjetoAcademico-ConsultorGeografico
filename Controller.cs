@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultaPaises
 {
-    public class Controller
+    internal class Controller
     {
         public virtual string CarregarObj(object obj)
         {

@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsultaPaises
 {
-    internal class ControllerPaises: Controller
+    internal class ControllerEstados: Controller
     {
+        ControllerPaises aControllerPais;
+
+        public ControllerEstados()
+        {
+            aControllerPais = new ControllerPaises();
+        }
         public override string CarregarObj(object obj)
         {
             return null;
