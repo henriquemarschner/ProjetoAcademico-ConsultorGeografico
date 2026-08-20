@@ -46,105 +46,107 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cidades.cs" />
-    <Compile Include="Controller.cs" />
-    <Compile Include="ControllerEstados.cs" />
-    <Compile Include="ControllerPaises.cs" />
-    <Compile Include="Estados.cs" />
-    <Compile Include="FrmCad.cs">
+    <Compile Include="Classes\Cidades.cs" />
+    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Controller\ControllerCidades.cs" />
+    <Compile Include="Controller\ControllerEstados.cs" />
+    <Compile Include="Controller\ControllerPaises.cs" />
+    <Compile Include="Classes\Estados.cs" />
+    <Compile Include="Forms\FrmCad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCad.Designer.cs">
+    <Compile Include="Forms\FrmCad.Designer.cs">
       <DependentUpon>FrmCad.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCadCid.cs">
+    <Compile Include="Forms\FrmCadCid.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCadCid.Designer.cs">
+    <Compile Include="Forms\FrmCadCid.Designer.cs">
       <DependentUpon>FrmCadCid.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCadEstados.cs">
+    <Compile Include="Forms\FrmCadEstados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCadEstados.Designer.cs">
+    <Compile Include="Forms\FrmCadEstados.Designer.cs">
       <DependentUpon>FrmCadEstados.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCadPaises.cs">
+    <Compile Include="Forms\FrmCadPaises.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCadPaises.Designer.cs">
+    <Compile Include="Forms\FrmCadPaises.Designer.cs">
       <DependentUpon>FrmCadPaises.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pai.cs" />
-    <Compile Include="FrmBase.cs">
+    <Compile Include="Classes\Funcionario.cs" />
+    <Compile Include="Classes\Pai.cs" />
+    <Compile Include="Forms\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBase.Designer.cs">
+    <Compile Include="Forms\FrmBase.Designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConCid.cs">
+    <Compile Include="Forms\FrmConCid.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConCid.Designer.cs">
+    <Compile Include="Forms\FrmConCid.Designer.cs">
       <DependentUpon>FrmConCid.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConEstados.cs">
+    <Compile Include="Forms\FrmConEstados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConEstados.Designer.cs">
+    <Compile Include="Forms\FrmConEstados.Designer.cs">
       <DependentUpon>FrmConEstados.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConPaises.cs">
+    <Compile Include="Forms\FrmConPaises.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConPaises.Designer.cs">
+    <Compile Include="Forms\FrmConPaises.Designer.cs">
       <DependentUpon>FrmConPaises.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConsultas.cs">
+    <Compile Include="Forms\FrmConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConsultas.Designer.cs">
+    <Compile Include="Forms\FrmConsultas.Designer.cs">
       <DependentUpon>FrmConsultas.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPrincipal.cs">
+    <Compile Include="Forms\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPrincipal.Designer.cs">
+    <Compile Include="Forms\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface.cs" />
-    <Compile Include="Paises.cs" />
-    <Compile Include="Pessoa.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Interface.cs" />
+    <Compile Include="Classes\Paises.cs" />
+    <Compile Include="Classes\Pessoa.cs" />
+    <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmBase.resx">
+    <EmbeddedResource Include="Forms\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCad.resx">
+    <EmbeddedResource Include="Forms\FrmCad.resx">
       <DependentUpon>FrmCad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCadCid.resx">
+    <EmbeddedResource Include="Forms\FrmCadCid.resx">
       <DependentUpon>FrmCadCid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCadEstados.resx">
+    <EmbeddedResource Include="Forms\FrmCadEstados.resx">
       <DependentUpon>FrmCadEstados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCadPaises.resx">
+    <EmbeddedResource Include="Forms\FrmCadPaises.resx">
       <DependentUpon>FrmCadPaises.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConCid.resx">
+    <EmbeddedResource Include="Forms\FrmConCid.resx">
       <DependentUpon>FrmConCid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConEstados.resx">
+    <EmbeddedResource Include="Forms\FrmConEstados.resx">
       <DependentUpon>FrmConEstados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConPaises.resx">
+    <EmbeddedResource Include="Forms\FrmConPaises.resx">
       <DependentUpon>FrmConPaises.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsultas.resx">
+    <EmbeddedResource Include="Forms\FrmConsultas.resx">
       <DependentUpon>FrmConsultas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrincipal.resx">
+    <EmbeddedResource Include="Forms\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
