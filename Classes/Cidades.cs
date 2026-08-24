@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultaPaises
 {
-    internal class Cidades : Pai
+    public class Cidades : Pai
     {
         protected string cidade;
         protected Estados oEstado;
