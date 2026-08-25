@@ -1,4 +1,5 @@
 ﻿using ConsultaPaises;
+using ConsultaPaises.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace ConsultaPaises
     {
         Estados oEstado;
         FrmCadEstados oFrmCadEstados;
+        ControllerEstados aControllerEstados;
         public FrmConEstados()
         {
             InitializeComponent();

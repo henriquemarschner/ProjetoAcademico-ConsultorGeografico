@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsultaPaises.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace ConsultaPaises
     {
         Cidades aCidade;
         FrmCadCid oFrmCadCid;
+        ControllerCidades aControllerCidades;
         public FrmConCid()
         {
             InitializeComponent();
@@ -19,10 +21,7 @@ namespace ConsultaPaises
         public override void ConhecaObjeto(object obj, object ctrl)
         {
             aCidade = (Cidades)obj;
-        }
-        public override void Pesquisar()
-        {
-
+            aControllerCidades = (ControllerCidades)ctrl;
         }
         public override void Incluir()
         {
@@ -50,6 +49,11 @@ namespace ConsultaPaises
             oFrmCadCid.ShowDialog();
             oFrmCadCid.btnSalva.Text = aux;
             oFrmCadCid.DesbloqueiaTxt();
+        }
+
+        public override void Pesquisar()
+        {
+
         }
         public override void setFrmCadastro(object obj)
         {

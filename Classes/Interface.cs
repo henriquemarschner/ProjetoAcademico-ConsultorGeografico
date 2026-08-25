@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsultaPaises.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,9 @@ namespace ConsultaPaises
         protected FrmCadPaises oFrmCadPaises;
         protected FrmCadEstados oFrmCadEstados;
         protected FrmCadCid oFrmCadCid;
+        protected ControllerPaises aControllerPaises;
+        protected ControllerEstados aControllerEstados;
+        protected ControllerCidades aControllerCidades;
 
         public Interface()
         {
@@ -35,19 +39,19 @@ namespace ConsultaPaises
 
         public void PecaPaises(object obj, object ctrl)
         {
-            oFrmConPaises.ConhecaObjeto(obj, null);
+            oFrmConPaises.ConhecaObjeto(obj, aControllerPaises);
             oFrmConPaises.ShowDialog();
         }
 
         public void PecaEstados(object obj, object ctrl)
         {
-            oFrmConEstados.ConhecaObjeto(obj, null);
+            oFrmConEstados.ConhecaObjeto(obj, aControllerEstados);
             oFrmConEstados.ShowDialog();
         }
 
         public void PecaCidades(object obj, object ctrl)
         {
-            oFrmConCid.ConhecaObjeto(obj, null);
+            oFrmConCid.ConhecaObjeto(obj, aControllerCidades);
             oFrmConCid.ShowDialog();
         }
     }

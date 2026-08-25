@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsultaPaises.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace ConsultaPaises
     {
         FrmConPaises oFrmConPaises;
         Estados oEstado;
+        ControllerEstados aControllerEstados;
         public FrmCadEstados()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace ConsultaPaises
         public override void ConhecaObjeto(object obj, object ctrl)
         {
             oEstado = (Estados)obj;
+            aControllerEstados = (ControllerEstados)ctrl;
         }
         public override void setFrmConsultas(object obj)
         {
