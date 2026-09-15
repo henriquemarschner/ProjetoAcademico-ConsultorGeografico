@@ -13,7 +13,7 @@ namespace ConsultaPaises
     {
         FrmConPaises oFrmConPaises;
         Estados oEstado;
-        ControllerEstados aControllerEstados;
+        ControllerEstados aCtrlEstados;
         public FrmCadEstados()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace ConsultaPaises
         public override void ConhecaObjeto(object obj, object ctrl)
         {
             oEstado = (Estados)obj;
-            aControllerEstados = (ControllerEstados)ctrl;
+            aCtrlEstados = (ControllerEstados)ctrl;
         }
         public override void setFrmConsultas(object obj)
         {

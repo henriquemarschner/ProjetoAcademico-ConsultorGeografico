@@ -13,7 +13,7 @@ namespace ConsultaPaises
     {
         Cidades aCidade;
         FrmCadCid oFrmCadCid;
-        ControllerCidades aControllerCidades;
+        ControllerCidades aCtrlCidades;
         public FrmConCid()
         {
             InitializeComponent();
@@ -21,18 +21,18 @@ namespace ConsultaPaises
         public override void ConhecaObjeto(object obj, object ctrl)
         {
             aCidade = (Cidades)obj;
-            aControllerCidades = (ControllerCidades)ctrl;
+            aCtrlCidades = (ControllerCidades)ctrl;
         }
         public override void Incluir()
         {
-            oFrmCadCid.ConhecaObjeto(aCidade, null);
+            oFrmCadCid.ConhecaObjeto(aCidade, aCtrlCidades);
             oFrmCadCid.LimpaTxt();
             oFrmCadCid.CarregaTxt();
             oFrmCadCid.ShowDialog();
         }
         public override void Alterar()
         {
-            oFrmCadCid.ConhecaObjeto(aCidade, null);
+            oFrmCadCid.ConhecaObjeto(aCidade, aCtrlCidades);
             oFrmCadCid.LimpaTxt();
             oFrmCadCid.CarregaTxt();
             oFrmCadCid.ShowDialog();
@@ -42,7 +42,7 @@ namespace ConsultaPaises
         {
             string aux = oFrmCadCid.btnSalva.Text;
             oFrmCadCid.btnSalva.Text = "Executar";
-            oFrmCadCid.ConhecaObjeto(aCidade, null);
+            oFrmCadCid.ConhecaObjeto(aCidade, aCtrlCidades);
             oFrmCadCid.LimpaTxt();
             oFrmCadCid.CarregaTxt();
             oFrmCadCid.BloqueiaTxt();

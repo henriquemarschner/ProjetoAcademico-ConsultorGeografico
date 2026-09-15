@@ -13,7 +13,7 @@ namespace ConsultaPaises
     {
         Cidades oCidade;
         FrmConEstados oFrmConEstados;
-        ControllerCidades aControllerCidades;
+        ControllerCidades aCtrlCidades;
 
         public FrmCadCid()
         {
@@ -23,7 +23,7 @@ namespace ConsultaPaises
         public override void ConhecaObjeto(object obj, object ctrl)
         {
             oCidade = (Cidades)obj;
-            aControllerCidades = (ControllerCidades)ctrl;
+            aCtrlCidades = (ControllerCidades)ctrl;
         }
 
         public override void setFrmConsultas(object obj)

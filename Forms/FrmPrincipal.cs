@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsultaPaises.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,9 @@ namespace ConsultaPaises
         private Paises oPais;
         private Estados oEstado;
         private Cidades aCidade;
+        private ControllerPaises aCtrlPaises;
+        private ControllerEstados aCtrlEstados;
+        private ControllerCidades aCtrlCidades;
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -23,6 +27,7 @@ namespace ConsultaPaises
             oPais = new Paises();
             oEstado = new Estados();
             aCidade = new Cidades();
+            aCtrlPaises = new ControllerPaises();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,17 +37,17 @@ namespace ConsultaPaises
 
         private void estadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            aInter.PecaEstados(oEstado, null);
+            aInter.PecaEstados(oEstado, aCtrlEstados);
         }
 
         private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            aInter.PecaCidades(aCidade, null);
+            aInter.PecaCidades(aCidade, aCtrlCidades);
         }
 
         private void paisesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            aInter.PecaPaises(oPais, null);
+            aInter.PecaPaises(oPais, aCtrlPaises);
         }
     }
 }

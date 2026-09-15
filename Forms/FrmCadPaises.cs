@@ -12,7 +12,7 @@ namespace ConsultaPaises
     public partial class FrmCadPaises : ConsultaPaises.FrmCad
     {
         Paises oPais;
-        ControllerPaises aControllerPaises;
+        ControllerPaises aCtrlPaises;
         public FrmCadPaises()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace ConsultaPaises
         public override void ConhecaObjeto(object obj, object ctrl)
         {
             oPais = (Paises)obj;
-            aControllerPaises = (ControllerPaises)ctrl;
+            aCtrlPaises = (ControllerPaises)ctrl;
         }
 
         public override void LimpaTxt()

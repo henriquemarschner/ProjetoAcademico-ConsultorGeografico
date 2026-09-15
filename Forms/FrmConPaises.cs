@@ -13,7 +13,7 @@ namespace ConsultaPaises
     {
         FrmCadPaises oFrmCadPaises;
         Paises oPais;
-        ControllerPaises aControllerPaises;
+        ControllerPaises aCtrlPaises;
         public FrmConPaises()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace ConsultaPaises
         public override void ConhecaObjeto(object obj, object ctrl)
         {
             oPais = (Paises)obj;
-            aControllerPaises = (ControllerPaises)ctrl;
+            aCtrlPaises = (ControllerPaises)ctrl;
         }
 
         public override void setFrmCadastro(object obj)
@@ -32,7 +32,7 @@ namespace ConsultaPaises
 
         public override void Incluir()
         {
-            oFrmCadPaises.ConhecaObjeto(oPais, null);
+            oFrmCadPaises.ConhecaObjeto(oPais, aCtrlPaises);
             oFrmCadPaises.LimpaTxt();
             oFrmCadPaises.CarregaTxt();
             oFrmCadPaises.ShowDialog();
@@ -40,7 +40,7 @@ namespace ConsultaPaises
 
         public override void Alterar()
         {
-            oFrmCadPaises.ConhecaObjeto(oPais, null);
+            oFrmCadPaises.ConhecaObjeto(oPais, aCtrlPaises);
             oFrmCadPaises.LimpaTxt();
             oFrmCadPaises.CarregaTxt();
             oFrmCadPaises.ShowDialog();
@@ -51,7 +51,7 @@ namespace ConsultaPaises
             string aux;
             aux = oFrmCadPaises.btnSalva.Text;
             oFrmCadPaises.btnSalva.Text = "Excluir";
-            oFrmCadPaises.ConhecaObjeto(oPais, null);
+            oFrmCadPaises.ConhecaObjeto(oPais, aCtrlPaises);
             oFrmCadPaises.LimpaTxt();
             oFrmCadPaises.CarregaTxt();
             oFrmCadPaises.BloqueiaTxt();
