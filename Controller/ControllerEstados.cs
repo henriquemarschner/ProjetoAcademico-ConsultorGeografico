@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsultaPaises.DAOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,8 @@ namespace ConsultaPaises.Controller
     public class ControllerEstados : Controller
     {
         ControllerPaises aControllerPais;
-
+        protected DAOestados aDAOEstados;
+        protected DAOpaises aDAOPaises;
         public ControllerEstados()
         {
             aControllerPais = new ControllerPaises();

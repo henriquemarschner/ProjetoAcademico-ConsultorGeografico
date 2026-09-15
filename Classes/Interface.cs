@@ -14,7 +14,7 @@ namespace ConsultaPaises
         protected FrmConCid oFrmConCid;
         protected FrmCadPaises oFrmCadPaises;
         protected FrmCadEstados oFrmCadEstados;
-        protected FrmCadCid oFrmCadCid;
+        protected FrmCadCidades oFrmCadCid;
         protected ControllerPaises aControllerPaises;
         protected ControllerEstados aControllerEstados;
         protected ControllerCidades aControllerCidades;
@@ -27,7 +27,7 @@ namespace ConsultaPaises
 
             oFrmCadPaises = new FrmCadPaises();
             oFrmCadEstados = new FrmCadEstados();
-            oFrmCadCid = new FrmCadCid();
+            oFrmCadCid = new FrmCadCidades();
 
             oFrmConPaises.setFrmCadastro(oFrmCadPaises);
             oFrmConEstados.setFrmCadastro(oFrmCadEstados);

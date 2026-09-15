@@ -74,6 +74,10 @@
     <Compile Include="Controller\ControllerPaises.cs" />
     <Compile Include="Classes\Estados.cs" />
     <Compile Include="Controller\ControllerPessoa.cs" />
+    <Compile Include="DAOs\DAOcidades.cs" />
+    <Compile Include="DAOs\DAO.cs" />
+    <Compile Include="DAOs\DAOestados.cs" />
+    <Compile Include="DAOs\DAOpaises.cs" />
     <Compile Include="Forms\FrmFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>

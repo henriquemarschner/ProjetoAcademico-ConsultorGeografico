@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsultaPaises.DAOs;
 
 namespace ConsultaPaises.Controller
 {
     public class ControllerPaises: Controller
     {
+        protected DAOpaises aDAOPaises; 
         public override string CarregarObj(object obj)
         {
             return null;

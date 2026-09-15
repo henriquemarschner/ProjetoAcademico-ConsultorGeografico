@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsultaPaises.DAOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,30 +11,33 @@ namespace ConsultaPaises.Controller
         {
             ControllerPaises aControllerPais;
             ControllerEstados aControllerEstado;
+            protected DAOcidades aDAOCidades;
+            protected DAOestados aDAOEstados;
+            protected DAOpaises aDAOPaises;
 
             public ControllerCidades()
             {
                 aControllerPais = new ControllerPaises();
                 aControllerEstado = new ControllerEstados();
             }
-            public override string CarregarObj(object obj)
-            {
-                return null;
-            }
+                public override string CarregarObj(object obj)
+                {
+                    return null;
+                }
 
-            public override string Salvar(object obj)
-            {
-                return null;
-            }
+                public override string Salvar(object obj)
+                {
+                    return null;
+                }
 
-            public override string Excluir(object obj)
-            {
-                return null;
-            }
+                public override string Excluir(object obj)
+                {
+                    return null;
+                }
 
-            public override List<Object> Pesquisar(object obj)
-            {
-                return null;
-            }
+                public override List<Object> Pesquisar(object obj)
+                {
+                    return null;
+                }
         }
 }
