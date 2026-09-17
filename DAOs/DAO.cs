@@ -19,5 +19,7 @@ namespace ConsultaPaises
         public abstract string CarregaTudo(Object obj);
 
         public abstract string Excluir(Object obj);
+
+        public abstract List<Object> Pesquisar(Object obj);
     }
 }
