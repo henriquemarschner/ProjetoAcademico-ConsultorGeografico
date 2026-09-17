@@ -26,6 +26,11 @@ namespace ConsultaPaises
         public override void LimpaTxt()
         {
             this.txtCod.Clear();
+            this.txtCod.Text = "0";
+            this.txtPais.Clear();
+            this.txtSigla.Clear();
+            this.txtDDI.Clear();
+            this.txtMoeda.Clear();
             this.lblCodUsu.Text = string.Empty;
             this.lblDatCad.Text = string.Empty;
             this.lblUltAlt.Text = string.Empty;
@@ -37,6 +42,11 @@ namespace ConsultaPaises
             this.lblCodUsu.Text = Convert.ToString(oPais.CodUsu);
             this.lblDatCad.Text = Convert.ToString(oPais.DatCad);
             this.lblUltAlt.Text = Convert.ToString(oPais.UltAlt);
+            this.txtCod.Text = Convert.ToString(oPais.Codigo);
+            this.txtPais.Text = oPais.Pais;
+            this.txtSigla.Text = oPais.Sigla;
+            this.txtDDI.Text = oPais.Ddi;
+            this.txtMoeda.Text = oPais.Moeda;
         }
 
         public override void BloqueiaTxt()
@@ -64,11 +74,17 @@ namespace ConsultaPaises
 
         public override void Salvar()
         {
+            string msg;
             oPais.Pais = this.txtPais.Text;
             oPais.Sigla = this.txtSigla.Text;
             oPais.Ddi = this.txtDDI.Text;
             oPais.Moeda = this.txtMoeda.Text;
             this.Sair();
+            msg = aCtrlPaises.Salvar(oPais);
+            if (msg != null)
+            {
+                ShowDialog(msg);
+            }
         }
 
         private void btnSalva_Click(object sender, EventArgs e)

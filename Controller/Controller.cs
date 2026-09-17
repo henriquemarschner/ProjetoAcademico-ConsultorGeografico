@@ -6,32 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsultaPaises.Controller
 {
-    public class Controller
+    internal abstract class Controller
     {
-        public virtual string CarregarObj(object obj)
-        {
-            return null;
-        }
+        public abstract string CarregarObj(object obj);
 
-        public virtual List<Object> CarregarCol(object obj)
-        {
-            return null;
-        }
+        public abstract List<Object> CarregarCol(object obj);
 
-        public virtual string Salvar(object obj)
-        {
-            return null;
-        }
+        public abstract string Salvar(object obj);
 
-        public virtual string Excluir(object obj)
-        {
-            return null;
-        }
+        public abstract string Excluir(object obj);
 
-        public virtual List<Object> Pesquisar(object obj)
-        {
-            return null;
-        }
-
+        public abstract List<Object> Pesquisar(object obj);
     }
 }

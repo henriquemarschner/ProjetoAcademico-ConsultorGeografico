@@ -11,14 +11,14 @@ namespace ConsultaPaises
         protected int numDep;
         protected int mat;
         protected double grat;
-        /// 
+        /// pibto
         protected string cep;
         protected string bairro;
         protected string complemento;
         protected int numero;
         protected string endereco;
         protected Cidades aCidade;
-        /// 
+        /// benis
         protected DateTime validade;
 
         public Funcionario() : base()
