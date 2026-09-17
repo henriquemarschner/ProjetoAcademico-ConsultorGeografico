@@ -75,6 +75,7 @@ namespace ConsultaPaises
         public override void Salvar()
         {
             string msg;
+            oPais.Codigo = Convert.ToInt32(this.txtCod.Text);
             oPais.Pais = this.txtPais.Text;
             oPais.Sigla = this.txtSigla.Text;
             oPais.Ddi = this.txtDDI.Text;
