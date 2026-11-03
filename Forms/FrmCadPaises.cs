@@ -84,7 +84,7 @@ namespace ConsultaPaises
             msg = aCtrlPaises.Salvar(oPais);
             if (msg != null)
             {
-                ShowDialog(msg);
+                MessageBox.Show(msg);
             }
         }
 

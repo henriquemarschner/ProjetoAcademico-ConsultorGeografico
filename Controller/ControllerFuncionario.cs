@@ -17,5 +17,20 @@ namespace ConsultaPaises.Controller
         {
             return null;
         }
+
+        public override string Salvar(object obj)
+        {
+            return null;
+        }
+
+        public override string Excluir(object obj)
+        {
+            return null;
+        }
+
+        public override List<Object> Pesquisar(object obj)
+        {
+            return null;
+        }
     }
 }

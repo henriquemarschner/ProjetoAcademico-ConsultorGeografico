@@ -12,7 +12,7 @@ namespace ConsultaPaises
     public partial class FrmConCid : ConsultaPaises.FrmConsultas
     {
         Cidades aCidade;
-        FrmCadCidades oFrmCadCid;
+        FrmCadCid oFrmCadCid;
         ControllerCidades aCtrlCidades;
         public FrmConCid()
         {
@@ -57,7 +57,7 @@ namespace ConsultaPaises
         }
         public override void setFrmCadastro(object obj)
         {
-            oFrmCadCid = (FrmCadCidades)obj;
+            oFrmCadCid = (FrmCadCid)obj;
         }
 
         private void FrmConCid_Load(object sender, EventArgs e)

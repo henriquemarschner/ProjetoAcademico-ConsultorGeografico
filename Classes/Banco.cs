@@ -10,7 +10,7 @@ namespace ConsultaPaises.Classes
 {
     internal class Banco
     {
-        private string strcnn = @"Data Source=localhost;Initial Catalog=ConsultaPaises;Integrated Security=True";
+        private static string strcnn = @"Data Source=localhost;Initial Catalog=ConsultaPaises;Integrated Security=True";
 
         public static SqlConnection AbrirDB()
         {

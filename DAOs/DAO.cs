@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultaPaises
 {
-    internal abstract class DAO
+    public abstract class DAO
     {
         public DAO()
         {

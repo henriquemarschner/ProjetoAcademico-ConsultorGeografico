@@ -13,7 +13,7 @@ namespace ConsultaPaises.Controller
             ControllerEstados aControllerEstado;
             protected DAOcidades aDAOCidades;
             protected DAOestados aDAOEstados;
-            protected DAOpaises aDAOPaises;
+            public DAOpaises aDAOPaises;
 
             public ControllerCidades()
             {
@@ -36,6 +36,11 @@ namespace ConsultaPaises.Controller
                 }
 
                 public override List<Object> Pesquisar(object obj)
+                {
+                    return null;
+                }
+
+                public override List<Object> CarregarCol(object obj)
                 {
                     return null;
                 }

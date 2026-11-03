@@ -9,7 +9,7 @@ namespace ConsultaPaises.Controller
 {
     public class ControllerPaises: Controller
     {
-        protected DAOpaises aDAOPaises; 
+        public DAOpaises aDAOPaises;
         public override string CarregarObj(object obj)
         {
             return null;

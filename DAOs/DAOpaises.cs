@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsultaPaises.DAOs
 {
-    internal abstract class DAOpaises : DAO
+    public abstract class DAOpaises : DAO
     {
         public override string CarregaObj(Object obj)
         {
@@ -19,16 +19,17 @@ namespace ConsultaPaises.DAOs
         {
             Paises oPais = (Paises)obj;
             string ok = "", sql="";
-            return ok;
             if (oPais.Codigo == 0)
             {
-                sql = "INSERT INTO paises (pais, sigla, ddi, moeda) VALUES (@pais, @sigla, @ddi, @moeda)";
+                sql = "INSERT INTO paises (pais, sigla, ddi, moeda) " +
+                       "VALUES (@pais, @sigla, @ddi, @moeda)";
+
             }
             else
             {
                 sql = "UPDATE paises SET pais = @pais, sigla = @sigla, ddi = @ddi, moeda = @moeda WHERE codigo = @codigo";
             }
-            using (SqlCommand cmd = new SqlCommand(sql, cnn)) 
+            using (SqlCommand cmd = new SqlCommand(sql, new SqlConnection()))
             {
                 cmd.Parameters.AddWithValue("@pais", oPais.Pais);
                 cmd.Parameters.AddWithValue("@sigla", oPais.Sigla);
@@ -40,8 +41,6 @@ namespace ConsultaPaises.DAOs
                 ok = cmd.ExecuteScalar().ToString();
             }
             return ok;
-
-
         }
 
         public override string CarregaTudo(Object obj)
@@ -50,9 +49,15 @@ namespace ConsultaPaises.DAOs
         }
         public override string Excluir(Object obj)
         {
-            return null;
-        }
+            Paises oPais = (Paises)obj;
+            string ok = "", sql = "";
+            try
+            {
+                sql = "DELETE FROM paises WHERE codigo = @codigo";
+            }
 
+
+        }
         public override List<Object> Pesquisar(Object obj)
         {
             return null;

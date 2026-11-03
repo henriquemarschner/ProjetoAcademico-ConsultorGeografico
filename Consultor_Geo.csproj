@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Banco.cs" />
     <Compile Include="Classes\Cargo.cs" />
     <Compile Include="Classes\Cidades.cs" />
     <Compile Include="Controller\Controller.cs" />
