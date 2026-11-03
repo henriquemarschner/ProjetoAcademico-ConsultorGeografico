@@ -34,6 +34,7 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtDDD = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtCod
@@ -92,10 +93,21 @@
             this.txtEstado.Size = new System.Drawing.Size(100, 22);
             this.txtEstado.TabIndex = 6;
             // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(359, 311);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(80, 23);
+            this.btnPesquisar.TabIndex = 7;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
             // FrmCadCid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtDDD);
             this.Controls.Add(this.txtCidade);
@@ -120,6 +132,7 @@
             this.Controls.SetChildIndex(this.txtCidade, 0);
             this.Controls.SetChildIndex(this.txtDDD, 0);
             this.Controls.SetChildIndex(this.txtEstado, 0);
+            this.Controls.SetChildIndex(this.btnPesquisar, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +146,6 @@
         protected System.Windows.Forms.TextBox txtCidade;
         protected System.Windows.Forms.TextBox txtDDD;
         protected System.Windows.Forms.TextBox txtEstado;
+        protected System.Windows.Forms.Button btnPesquisar;
     }
 }

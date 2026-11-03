@@ -14,9 +14,11 @@ namespace ConsultaPaises
         FrmConPaises oFrmConPaises;
         Estados oEstado;
         ControllerEstados aCtrlEstados;
+        ControllerPaises aCtrlPaises;
         public FrmCadEstados()
         {
             InitializeComponent();
+            aCtrlPaises = new ControllerPaises();
         }
 
         public override void ConhecaObjeto(object obj, object ctrl)
@@ -69,7 +71,7 @@ namespace ConsultaPaises
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            oFrmConPaises.ConhecaObjeto(oEstado.Opais ,null);
+            oFrmConPaises.ConhecaObjeto(oEstado.Opais , aCtrlPaises);
             oFrmConPaises.ShowDialog();
         }
     }

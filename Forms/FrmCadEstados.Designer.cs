@@ -76,7 +76,7 @@
             // lblPais
             // 
             this.lblPais.AutoSize = true;
-            this.lblPais.Location = new System.Drawing.Point(420, 236);
+            this.lblPais.Location = new System.Drawing.Point(388, 237);
             this.lblPais.Name = "lblPais";
             this.lblPais.Size = new System.Drawing.Size(34, 16);
             this.lblPais.TabIndex = 5;
@@ -103,7 +103,7 @@
             // 
             // txtPais
             // 
-            this.txtPais.Location = new System.Drawing.Point(387, 255);
+            this.txtPais.Location = new System.Drawing.Point(355, 256);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(100, 22);
             this.txtPais.TabIndex = 4;
@@ -111,7 +111,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(516, 402);
+            this.btnPesquisar.Location = new System.Drawing.Point(461, 256);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(80, 23);
             this.btnPesquisar.TabIndex = 5;
@@ -121,7 +121,7 @@
             // 
             // txtCodPais
             // 
-            this.txtCodPais.Location = new System.Drawing.Point(323, 255);
+            this.txtCodPais.Location = new System.Drawing.Point(291, 256);
             this.txtCodPais.Name = "txtCodPais";
             this.txtCodPais.Size = new System.Drawing.Size(58, 22);
             this.txtCodPais.TabIndex = 4;
@@ -171,8 +171,8 @@
         protected System.Windows.Forms.Label lblPais;
         protected System.Windows.Forms.TextBox txtUF;
         protected System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.Button btnPesquisar;
         protected System.Windows.Forms.TextBox txtPais;
         protected System.Windows.Forms.TextBox txtCodPais;
+        protected System.Windows.Forms.Button btnPesquisar;
     }
 }

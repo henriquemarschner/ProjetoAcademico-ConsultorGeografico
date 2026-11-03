@@ -14,10 +14,12 @@ namespace ConsultaPaises
         Cidades oCidade;
         FrmConEstados oFrmConEstados;
         ControllerCidades aCtrlCidades;
+        ControllerEstados aCtrlEstados;
 
         public FrmCadCid()
         {
             InitializeComponent();
+            aCtrlEstados = new ControllerEstados();
         }
 
         public override void ConhecaObjeto(object obj, object ctrl)
@@ -54,6 +56,12 @@ namespace ConsultaPaises
         {
             oCidade.Codigo = Convert.ToInt32(this.txtCod.Text);
             this.Sair();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            oFrmConEstados.ConhecaObjeto(oCidade.Oestado, aCtrlEstados);
+            oFrmConEstados.ShowDialog();
         }
     }
 }
