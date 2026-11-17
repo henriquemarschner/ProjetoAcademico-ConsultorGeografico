@@ -43,6 +43,7 @@ namespace ConsultaPaises
             get => oPais;
             set => oPais = value;
         }
-
+        public object Sigla { get; internal set; }
+        public object PaisCodigo { get; internal set; }
     }
 }

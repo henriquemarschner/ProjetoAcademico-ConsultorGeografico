@@ -51,9 +51,19 @@ namespace ConsultaPaises.DAOs
             try
             {
                 sql = "DELETE FROM cidades WHERE codigo = @codigo";
+                using (SqlCommand cmd = new SqlCommand(sql, new SqlConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@codigo", oCidades.Codigo);
+                    cmd.Connection.Open();
+                    cmd.ExecuteNonQuery();
+                    ok = "OK";
+                }
             }
-
-
+            catch (Exception ex)
+            {
+                ok = ex.Message;
+            }
+            return ok;
         }
         public override List<Object> Pesquisar(Object obj)
         {

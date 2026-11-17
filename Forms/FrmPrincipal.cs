@@ -28,6 +28,8 @@ namespace ConsultaPaises
             oEstado = new Estados();
             aCidade = new Cidades();
             aCtrlPaises = new ControllerPaises();
+            aCtrlEstados = new ControllerEstados();
+            aCtrlCidades = new ControllerCidades();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

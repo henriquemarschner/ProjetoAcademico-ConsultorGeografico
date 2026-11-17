@@ -1,15 +1,21 @@
-﻿using System;
+﻿using ConsultaPaises.Classes;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace ConsultaPaises.DAOs
 {
     public abstract class DAOpaises : DAO
     {
+        protected SqlConnection cnn;
+
+        public DAOpaises()
+        {
+            cnn = Banco.AbrirDB();
+        }
         public override string CarregaObj(Object obj)
         {
             return null;
@@ -54,9 +60,18 @@ namespace ConsultaPaises.DAOs
             try
             {
                 sql = "DELETE FROM paises WHERE codigo = @codigo";
+                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                {
+                    cmd.Parameters.AddWithValue("@codigo", oPais.Codigo);
+                    int rows = cmd.ExecuteNonQuery();
+                    ok = rows > 0 ? "OK" : "Nenhum registro excluído";
+                }
             }
-
-
+            catch (Exception ex)
+            {
+                ok = ex.Message;
+            }
+            return ok;
         }
         public override List<Object> Pesquisar(Object obj)
         {

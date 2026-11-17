@@ -11,7 +11,7 @@ namespace ConsultaPaises.Controller
         {
             ControllerPaises aControllerPais;
             ControllerEstados aControllerEstado;
-            protected DAOcidades aDAOCidades;
+            protected DAOCidades aDAOCidades;
             protected DAOestados aDAOEstados;
             public DAOpaises aDAOPaises;
 

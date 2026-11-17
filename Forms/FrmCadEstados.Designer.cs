@@ -54,33 +54,34 @@
             // btnSair
             // 
             this.btnSair.TabIndex = 7;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // lblUF
             // 
             this.lblUF.AutoSize = true;
             this.lblUF.Location = new System.Drawing.Point(393, 145);
             this.lblUF.Name = "lblUF";
-            this.lblUF.Size = new System.Drawing.Size(25, 16);
+            this.lblUF.Size = new System.Drawing.Size(30, 16);
             this.lblUF.TabIndex = 5;
-            this.lblUF.Text = "UF";
+            this.lblUF.Text = "UF*";
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Location = new System.Drawing.Point(379, 189);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(50, 16);
+            this.lblEstado.Size = new System.Drawing.Size(55, 16);
             this.lblEstado.TabIndex = 5;
-            this.lblEstado.Text = "Estado";
+            this.lblEstado.Text = "Estado*";
             // 
             // lblPais
             // 
             this.lblPais.AutoSize = true;
             this.lblPais.Location = new System.Drawing.Point(388, 237);
             this.lblPais.Name = "lblPais";
-            this.lblPais.Size = new System.Drawing.Size(34, 16);
+            this.lblPais.Size = new System.Drawing.Size(39, 16);
             this.lblPais.TabIndex = 5;
-            this.lblPais.Text = "Pais";
+            this.lblPais.Text = "Pais*";
             // 
             // txtUF
             // 

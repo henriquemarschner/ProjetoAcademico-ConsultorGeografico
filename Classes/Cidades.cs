@@ -43,6 +43,7 @@ namespace ConsultaPaises
             get => oEstado;
             set => oEstado = value;
         }
+        public object EstadoCodigo { get; internal set; }
 
         public new Cidades Clone()
         {

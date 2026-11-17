@@ -39,7 +39,7 @@ namespace ConsultaPaises
 
         public void PecaPaises(object obj, object ctrl)
         {
-            oFrmConPaises.ConhecaObjeto(obj, aControllerPaises);
+            oFrmConPaises.ConhecaObjeto(obj, ctrl);
             oFrmConPaises.ShowDialog();
         }
 

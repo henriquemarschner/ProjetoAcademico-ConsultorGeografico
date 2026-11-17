@@ -60,7 +60,7 @@ namespace ConsultaPaises
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            oFrmConEstados.ConhecaObjeto(oCidade.Oestado, aCtrlEstados);
+            oFrmConEstados.ConhecaObjeto(oCidade.OEstado, aCtrlEstados);
             oFrmConEstados.ShowDialog();
         }
     }

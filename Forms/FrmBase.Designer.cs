@@ -78,6 +78,6 @@
         #endregion
         protected System.Windows.Forms.TextBox txtCod;
         protected System.Windows.Forms.Label lblTxt;
-        protected System.Windows.Forms.Button btnSair;
+        public System.Windows.Forms.Button btnSair;
     }
 }

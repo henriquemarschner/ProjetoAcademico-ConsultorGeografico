@@ -10,10 +10,10 @@ namespace ConsultaPaises.Controller
     public class ControllerPaises: Controller
     {
         public DAOpaises aDAOPaises;
-        public void ControllerPaises()
-        {
-            aDAOPaises = new DAOpaises();
-        }
+        //public ControllerPaises()
+        //{
+        //    aDAOPaises = new DAOpaises();
+        //}
         public override string CarregarObj(object obj)
         {
             return null;
