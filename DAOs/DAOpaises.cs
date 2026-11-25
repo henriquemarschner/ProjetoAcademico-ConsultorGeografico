@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing.Text;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -26,29 +27,61 @@ namespace ConsultaPaises.DAOs
         public override string Salvar(Object obj)
         {
             Paises oPais = (Paises)obj;
-            string ok = "", sql="";
-            if (oPais.Codigo == 0)
-            {
-                sql = "INSERT INTO paises (pais, sigla, ddi, moeda) " +
-                       "VALUES (@pais, @sigla, @ddi, @moeda)";
 
-            }
-            else
+            using (SqlConnection cnn = Banco.AbrirDB())
+            using (SqlTransaction tx = cnn.BeginTransaction())
             {
-                sql = "UPDATE paises SET pais = @pais, sigla = @sigla, ddi = @ddi, moeda = @moeda WHERE codigo = @codigo";
+                try
+                {
+                    int codigo = oPais.Codigo;
+
+                    if (codigo == 0)
+                    {
+                        const string sql =
+                            "INSERT INTO paises (pais, sigla, ddi, moeda) " +
+                            "OUTPUT INSERTED.id " +
+                            "VALUES (@pais, @sigla, @ddi, @moeda);";
+
+                        using (SqlCommand cmd = new SqlCommand(sql, cnn, tx))
+                        {
+                            AdicionarParametros(cmd, oPais);
+                            codigo = Convert.ToInt32(cmd.ExecuteScalar());
+                        }
+                    }
+                    else
+                    {
+                        const string sql =
+                            "UPDATE paises SET pais = @pais, sigla = @sigla, ddi = @ddi, moeda = @moeda " +
+                            "WHERE id = @codigo";
+
+                        using (SqlCommand cmd = new SqlCommand(sql, cnn, tx))
+                        {
+                            AdicionarParametros(cmd, oPais);
+                            cmd.Parameters.Add("@codigo", SqlDbType.Int).Value = codigo;
+
+                            if (cmd.ExecuteNonQuery() == 0)
+                                throw new InvalidOperationException("País não encontrado");
+                        }
+                    }
+
+                    tx.Commit();
+                    oPais.Codigo = codigo;
+                    return codigo.ToString();
+                }
+                catch
+                {
+                    tx.Rollback();
+                    throw;
+                }
             }
-            using (SqlCommand cmd = new SqlCommand(sql, new SqlConnection()))
-            {
-                cmd.Parameters.AddWithValue("@pais", oPais.Pais);
-                cmd.Parameters.AddWithValue("@sigla", oPais.Sigla);
-                cmd.Parameters.AddWithValue("@ddi", oPais.Ddi);
-                cmd.Parameters.AddWithValue("@moeda", oPais.Moeda);
-                cmd.Parameters.AddWithValue("@codigo", oPais.Codigo);
-                cmd.ExecuteNonQuery();
-                cmd.CommandText = "Select @@IDENTITY";
-                ok = cmd.ExecuteScalar().ToString();
-            }
-            return ok;
+        }
+
+        private static void AdicionarParametros(SqlCommand cmd, Paises oPais)
+        {
+            cmd.Parameters.Add("@pais", SqlDbType.VarChar,50).Value = oPais.Pais;
+            cmd.Parameters.Add("@sigla", SqlDbType.VarChar,3).Value = oPais.Sigla;
+            cmd.Parameters.Add("@ddi", SqlDbType.VarChar,5).Value = oPais.Ddi;
+            cmd.Parameters.Add("@moeda", SqlDbType.VarChar,5).Value = oPais.Moeda;
         }
 
         public override string CarregaTudo(Object obj)
@@ -118,36 +151,39 @@ namespace ConsultaPaises.DAOs
         }
 
         public string CarregarObj(object obj)
-                    {
-                        Paises oPais = (Paises)obj;
-                        string sql = "SELECT * FROM paises WHERE codigo = @codigo";
-                        try
-                        {
-                            if (cnn.State == ConnectionState.Closed)
-                                cnn.Open();
+        {
+            Paises oPais = (Paises)obj;
+            const string sql = "SELECT * FROM paises WHERE id = @codigo";
 
-                            using (var cmd = new SqlCommand(sql, cnn))
-                            {
-                                cmd.Parameters.AddWithValue("@codigo", oPais.Codigo);
-                                using (SqlDataReader dr = cmd.ExecuteReader())
-                                {
-                                    if (dr.Read())
-                                    {
-                                        oPais.Codigo = Convert.ToInt32(dr["codigo"]);
-                                        oPais.Pais = dr["pais"].ToString();
-                                        oPais.Sigla = dr["sigla"].ToString();
-                                        oPais.Ddi = dr["ddi"].ToString();
-                                        oPais.Moeda = dr["moeda"].ToString();
-                                    }
-                                }
-                            }
-                        }
-                        finally
+            try
+            {
+                if (cnn.State == ConnectionState.Closed)
+                    cnn.Open();
+
+                using (var cmd = new SqlCommand(sql, cnn))
+                {
+                    cmd.Parameters.AddWithValue("@codigo", oPais.Codigo);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
                         {
-                            if (cnn.State == ConnectionState.Open)
-                                cnn.Close();
+                            oPais.Codigo = Convert.ToInt32(dr["id"]);
+                            oPais.Pais = dr["pais"].ToString();
+                            oPais.Sigla = dr["sigla"].ToString();
+                            oPais.Ddi = dr["ddi"].ToString();
+                            oPais.Moeda = dr["moeda"].ToString();
                         }
-                        return null;
                     }
                 }
             }
+            finally
+            {
+                if (cnn.State == ConnectionState.Open)
+                    cnn.Close();
+            }
+
+            return null;
+        }
+    }
+}
