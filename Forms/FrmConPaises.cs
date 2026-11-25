@@ -23,6 +23,7 @@ namespace ConsultaPaises
         {
             oPais = (Paises)obj;
             aCtrlPaises = (ControllerPaises)ctrl;
+            this.Pesquisar();
         }
 
         public override void setFrmCadastro(object obj)
@@ -62,8 +63,25 @@ namespace ConsultaPaises
 
         public override void Pesquisar()
         {
+            this.LV.Items.Clear();
+            //   Paises oP = new Paises();
+            oPais.Pais = txtCod.Text.Trim().ToUpper();
+            var listaResultado = new List<Paises>();
+            //   listaResultado = aCtrlPaises.Pesquisar(oP);
+            foreach (var o in aCtrlPaises.Pesquisar(oPais))
+            {
+                listaResultado.Add((Paises)o);
+            }
 
+            foreach (var oPais in listaResultado)
+            {
+                ListViewItem item = new ListViewItem(".");
+                item.SubItems.Add(oPais.Pais);
+                item.SubItems.Add(oPais.Sigla);
+                item.SubItems.Add(oPais.Ddi);
+                item.SubItems.Add(oPais.Moeda);
+                this.LV.Items.Add(item);
+            }
         }
-
     }
 }
